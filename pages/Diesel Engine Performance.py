@@ -25,14 +25,17 @@ with st.container():
 
         DIVIDE_CONSTANT = 600
 
-        LOAD = st.text_input(label="LOAD")
+        LOAD = st.text_input(label="LOAD (KW)")
 
-        ARM_LENGTH = st.text_input(label="ARM LENGTH")
+        ARM_LENGTH = st.text_input(label="ARM LENGTH (M)")
 
 
         st.write("---")
 
-        submit = st.button("SUBMIT")
+        m_left, m_mid, m_right = st.columns(3)
+
+        with m_mid:
+            submit = st.button("SUBMIT")
 
         st.write("---")
 
@@ -51,10 +54,23 @@ with st.container():
 
 
                 BRAKE_POWER = (2 * math.pi * SPEED * TORQUE) / DIVIDE_CONSTANT
-                st.success(f"TORQUE: {TORQUE}")
-                st.success(f"BRAKE POWER: {round(BRAKE_POWER, ndigits=5)}")
+                st.success(f"TORQUE: {TORQUE} (RPM)")
+                st.success(f"BRAKE POWER: {round(BRAKE_POWER, ndigits=5)} (KW)")
                 
 
             #         copyright = "This program is created by Mr. Shreyash A. Kamble. for enquiry contact : shreyash261020@gmail.com :"
             #     # -----------------------------------------------------------------------------------------
-                
+
+
+with st.container():
+    st.write("---")
+    img1, img2, img3 = st.columns(3)
+
+    with img1:
+        st.image(r"assets/images/Algae Bottle.jpeg", caption="Bio Diasel")
+    with img2:
+        st.image(r"assets/images/Chemicals Bottle.jpeg", caption="Chemicals")
+    with img3:
+        st.image(r"assets/images/Diasel Engine.jpeg", caption="Four Stoke Diasel Engine")
+
+    st.write("---")

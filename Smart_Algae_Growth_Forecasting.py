@@ -26,7 +26,10 @@ with st.container():
 
         st.write("---")
 
-        submit = st.button("SUBMIT")
+        m_left, m_mid, m_right = st.columns(3)
+
+        with m_mid:
+            submit = st.button("SUBMIT")
 
         st.write("---")
 
@@ -40,7 +43,7 @@ with st.container():
                 ml_model = pickle.load(open('algae_model.pkl', 'rb'))
                 prediction = ml_model.predict(ml_inputs)
 
-                st.success(f"The algae growth per volume litre: {round(prediction[0], 6)}")
+                st.success(f"The algae growth per volume litre: {round(prediction[0], 6)} (KG)")
 
                 copyright = "This program is created by Mr. Shreyash A. Kamble. for enquiry contact : shreyash261020@gmail.com :"
             # -----------------------------------------------------------------------------------------

@@ -6,7 +6,6 @@ echo.
 echo [IF YOU ENTER ANY KEY THE PROGRAM WILL START AUTOMATICALLY]
 echo.
 echo.
-pause
 
 
 echo Title: Novel Smart Algae Bio Panel and It's Growth Forecasting using ML - A Sustainable Solution
