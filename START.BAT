@@ -25,4 +25,4 @@ pip install -r requirements.txt
 echo.
 echo. 
 
-streamlit run Mainpage.py
+streamlit run Smart_Algae_Growth_Forecasting.py
